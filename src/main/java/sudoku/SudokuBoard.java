@@ -3,20 +3,27 @@ package sudoku;
 import java.util.*;
 
 public class SudokuBoard {
-    private SudokuField[][] board;
+    private List<SudokuField> board = Arrays.asList(new SudokuField[81]);
 
     public SudokuBoard(final int[][] board) { //final -> const
-        this.board = new SudokuField[9][9];
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                this.board[i][j] = new SudokuField();
-            }
-        }
+        SudokuField tmp;
 
         for (int i = 0; i <= 8; i++) {
             for (int j = 0; j <= 8; j++) {
-                this.board[i][j].getFieldValue();
-                this.board[i][j].setFieldValue(board[i][j]);
+                tmp = new SudokuField();
+                if (board[i][j] < 0 || board[i][j] > 9) {
+                    tmp.setFieldValue(0);
+                    this.board.set(i * 9 + j, tmp);
+                } else {
+                    tmp.setFieldValue(board[i][j]);
+                    this.board.set(i * 9 + j, tmp);
+                }
+            }
+        }
+
+        if (!checkBoard()) {
+            for (SudokuField field : this.board) {
+                field.setFieldValue(0);
             }
         }
     }
@@ -24,7 +31,8 @@ public class SudokuBoard {
     private boolean checkBoard() {
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
-                int num = board[row][col].getFieldValue();
+                int num = board.get(row * 9 + col).getFieldValue();
+                //System.out.println(row+"  "+col+"  :   "+num);
                 if (num != 0) {
                     if (!checkNumber(num, row, col)) { //causes lots of errors
                         return false;
@@ -36,13 +44,13 @@ public class SudokuBoard {
     }
 
     public int get(int x, int y) {
-        return board[x][y].getFieldValue();
+        return board.get(x * 9 + y).getFieldValue();
     }
 
     public boolean set(int x, int y, int value) {
-        if (value < 0 || value > 9) {
-            return false;
-        }
+        // if (value < 0 || value > 9) {
+        //    return false;
+        //}
         try {
 
             if (value != 0) {
@@ -51,48 +59,43 @@ public class SudokuBoard {
                 }
             }
 
-            board[x][y].setFieldValue(value);
-        } catch (ArrayIndexOutOfBoundsException e) {
+            board.get(x * 9 + y).setFieldValue(value);
+        } catch (IndexOutOfBoundsException e) {
             return false;
         }
         return true;
     }
 
     public SudokuRow getRow(int row) {
-        SudokuField[] tmp = new SudokuField[9];
+        List<SudokuField> rows = Arrays.asList(new SudokuField[9]);
+
         for (int i = 0; i < 9; i++) {
-            tmp[i] = new SudokuField();
-            tmp[i].setFieldValue(board[row][i].getFieldValue());
+            rows.set(i, board.get(row * 9 + i));
         }
-        return new SudokuRow(tmp);
+        return new SudokuRow(rows);
     }
 
     public SudokuColumn getColumn(int column) {
-        SudokuField[] tmp = new SudokuField[9];
+        List<SudokuField> columns = Arrays.asList(new SudokuField[9]);
         for (int i = 0; i < 9; i++) {
-            tmp[i] = new SudokuField();
-            tmp[i].setFieldValue(board[i][column].getFieldValue());
+            columns.set(i, board.get(i * 9 + column));
         }
-        return new SudokuColumn(tmp);
+        return new SudokuColumn(columns);
     }
 
     public SudokuBox getBox(int row, int column) {
         int tempR = row - row % 3;
         int tempC = column - column % 3;
-        SudokuField[] tmp = new SudokuField[9];
-
-        for (int i = 0; i < 9; i++) {
-            tmp[i] = new SudokuField();
-        }
+        List<SudokuField> boxes = Arrays.asList(new SudokuField[9]);
 
         int i = 0;
         for (int r = tempR; r < tempR + 3; r++) {
             for (int c = tempC; c < tempC + 3; c++) {
-                tmp[i].setFieldValue(board[r][c].getFieldValue());
+                boxes.set(i, board.get(r * 9 + c));
                 i++;
             }
         }
-        return new SudokuBox(tmp);
+        return new SudokuBox(boxes);
     }
 
     public String toString() {
@@ -107,10 +110,10 @@ public class SudokuBoard {
                     stringBuilder.append("| ");
                 }
                 if (j == 8) {
-                    stringBuilder.append(board[i][j].getFieldValue());
+                    stringBuilder.append(board.get(i * 9 + j).getFieldValue());
                     stringBuilder.append("\n");
                 } else {
-                    stringBuilder.append(board[i][j].getFieldValue());
+                    stringBuilder.append(board.get(i * 9 + j).getFieldValue());
                     stringBuilder.append("  ");
                 }
             }
@@ -119,14 +122,16 @@ public class SudokuBoard {
     }
 
     private boolean checkNumber(int number, int row, int column) {
-
-        board[row][column].setFieldValue(number);
+        if (number < 0 || number > 9) {
+            return false;
+        }
+        board.get(row * 9 + column).setFieldValue(number);
         if (getBox(row, column).verify()
-                && getBox(row, column).verify()
-                && getBox(row, column).verify()) {
+                && getRow(row).verify()
+                && getColumn(column).verify()) {
             return true;
         }
-        board[row][column].setFieldValue(0);
+        board.get(row * 9 + column).setFieldValue(0);
         return false;
     }
 

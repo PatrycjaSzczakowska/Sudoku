@@ -4,43 +4,77 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-<span class="fc" id="L7">public class BacktrackingSudokuSolver implements SudokuSolver {</span>
-    public boolean solve(final SudokuBoard board) {
-        int[] temp;
-<span class="fc" id="L10">        temp = findEmpty(board);</span>
-<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (temp[0] == 10) {</span>
-<span class="fc" id="L12">            return true;</span>
-        }
+class Pair {
+    int first;
+    int second;
+    boolean empty;
 
-<span class="fc" id="L15">        ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));</span>
-<span class="fc" id="L16">        Collections.shuffle(numbers);</span>
-<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (Integer num : numbers) {</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">            if (board.set(temp[0], temp[1], num)) {</span>
+<span class="fc" id="L12">    public Pair(int first, int second) {</span>
+<span class="fc" id="L13">        this.first = first;</span>
+<span class="fc" id="L14">        this.second = second;</span>
+<span class="fc" id="L15">        this.empty = true;</span>
+<span class="fc" id="L16">    }</span>
 
-<span class="fc bfc" id="L20" title="All 2 branches covered.">                if (solve(board)) {</span>
-<span class="fc" id="L21">                    return true;</span>
-                }
 
-<span class="fc" id="L24">                board.set(temp[0], temp[1], 0);</span>
-            }
-<span class="fc" id="L26">        }</span>
-<span class="fc" id="L27">        return false;</span>
+    public int getFirst() {
+<span class="fc" id="L20">        return first;</span>
     }
 
-    int[] findEmpty(final SudokuBoard board) {
-<span class="fc" id="L31">        int[] temp = new int[2];</span>
-<span class="fc" id="L32">        temp[0] = 10;</span>
-<span class="fc" id="L33">        temp[1] = 10;</span>
-<span class="fc bfc" id="L34" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
-<span class="fc bfc" id="L35" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
-<span class="fc bfc" id="L36" title="All 2 branches covered.">                if (board.get(row, col) == 0) {</span>
-<span class="fc" id="L37">                    temp[0] = row;</span>
-<span class="fc" id="L38">                    temp[1] = col;</span>
-<span class="fc" id="L39">                    return temp;</span>
+    public void setFirst(int first) {
+<span class="fc" id="L24">        this.first = first;</span>
+<span class="fc" id="L25">    }</span>
+
+    public int getSecond() {
+<span class="fc" id="L28">        return second;</span>
+    }
+
+    public void setSecond(int second) {
+<span class="fc" id="L32">        this.second = second;</span>
+<span class="fc" id="L33">    }</span>
+
+    public boolean isFlag() {
+<span class="fc" id="L36">        return empty;</span>
+    }
+
+    public void setFlag(boolean flag) {
+<span class="fc" id="L40">        this.empty = flag;</span>
+<span class="fc" id="L41">    }</span>
+}
+
+<span class="fc" id="L44">public class BacktrackingSudokuSolver implements SudokuSolver {</span>
+    public boolean solve(final SudokuBoard board) {
+<span class="fc" id="L46">        Pair temp = findEmpty(board);</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (temp.isFlag()) {</span>
+<span class="fc" id="L48">            return true;</span>
+        }
+<span class="fc" id="L50">        ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));</span>
+<span class="fc" id="L51">        Collections.shuffle(numbers);</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (Integer num : numbers) {</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (board.set(temp.getFirst(), temp.getSecond(), num)) {</span>
+
+<span class="fc bfc" id="L55" title="All 2 branches covered.">                if (solve(board)) {</span>
+<span class="fc" id="L56">                    return true;</span>
+                }
+
+<span class="fc" id="L59">                board.set(temp.getFirst(), temp.getSecond(), 0);</span>
+            }
+<span class="fc" id="L61">        }</span>
+<span class="fc" id="L62">        return false;</span>
+    }
+
+    Pair findEmpty(final SudokuBoard board) {
+<span class="fc" id="L66">        Pair temp = new Pair(0, 0);</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">                if (board.get(row, col) == 0) {</span>
+<span class="fc" id="L70">                    temp.setFirst(row);</span>
+<span class="fc" id="L71">                    temp.setSecond(col);</span>
+<span class="fc" id="L72">                    temp.setFlag(false);</span>
+<span class="fc" id="L73">                    return temp;</span>
                 }
             }
         }
-<span class="fc" id="L43">        return temp;</span>
+<span class="fc" id="L77">        return temp;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

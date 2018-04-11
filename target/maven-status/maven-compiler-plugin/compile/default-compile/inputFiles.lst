@@ -1,4 +1,12 @@
-D:\STUDIA\2 rok\IV semestr\Komponentowe\sudoku\src\main\java\sudoku\BacktrackingSudokuSolver.java
-D:\STUDIA\2 rok\IV semestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuSolver.java
-D:\STUDIA\2 rok\IV semestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuBoard.java
-D:\STUDIA\2 rok\IV semestr\Komponentowe\sudoku\src\main\java\sudoku\Main.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuBoardDaoFactory.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuBox.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuSolver.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\BacktrackingSudokuSolver.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuVerify.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\Main.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuRow.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuColumn.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\FileSudokuBoardDao.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuField.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\SudokuBoard.java
+D:\STUDIA\2rok\IVsemestr\Komponentowe\sudoku\src\main\java\sudoku\Dao.java

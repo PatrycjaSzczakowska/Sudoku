@@ -3,112 +3,136 @@
 import java.util.*;
 
 public class SudokuBoard {
-    private int[][] board;
+<span class="fc" id="L6">    private List&lt;SudokuField&gt; board = Arrays.asList(new SudokuField[81]);</span>
 
 <span class="fc" id="L8">    public SudokuBoard(final int[][] board) { //final -&gt; const</span>
-<span class="fc" id="L9">        this.board = board;</span>
-        //if (!checkBoard()) {
-        //    this.board =  new int[9][9];
-        //}
-<span class="fc" id="L13">    }</span>
+        SudokuField tmp;
+
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        for (int i = 0; i &lt;= 8; i++) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">            for (int j = 0; j &lt;= 8; j++) {</span>
+<span class="fc" id="L13">                tmp = new SudokuField();</span>
+<span class="fc bfc" id="L14" title="All 4 branches covered.">                if (board[i][j] &lt; 0 || board[i][j] &gt; 9) {</span>
+<span class="fc" id="L15">                    tmp.setFieldValue(0);</span>
+<span class="fc" id="L16">                    this.board.set(i * 9 + j, tmp);</span>
+                } else {
+<span class="fc" id="L18">                    tmp.setFieldValue(board[i][j]);</span>
+<span class="fc" id="L19">                    this.board.set(i * 9 + j, tmp);</span>
+                }
+            }
+        }
+
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (!checkBoard()) {</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">            for (SudokuField field : this.board) {</span>
+<span class="fc" id="L26">                field.setFieldValue(0);</span>
+<span class="fc" id="L27">            }</span>
+        }
+<span class="fc" id="L29">    }</span>
 
     private boolean checkBoard() {
-<span class="nc bnc" id="L16" title="All 2 branches missed.">        for (int row = 0; row &lt; 9; row++) {</span>
-<span class="nc bnc" id="L17" title="All 2 branches missed.">            for (int col = 0; col &lt; 9; col++) {</span>
-<span class="nc" id="L18">                int num = board[row][col];</span>
-<span class="nc bnc" id="L19" title="All 2 branches missed.">                if (num != 0) {</span>
-<span class="nc bnc" id="L20" title="All 2 branches missed.">                    if (!checkNumber(num, row, col)) { //causes lots of errors</span>
-<span class="nc" id="L21">                        return false;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (int row = 0; row &lt; 9; row++) {</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            for (int col = 0; col &lt; 9; col++) {</span>
+<span class="fc" id="L34">                int num = board.get(row * 9 + col).getFieldValue();</span>
+                //System.out.println(row+&quot;  &quot;+col+&quot;  :   &quot;+num);
+<span class="fc bfc" id="L36" title="All 2 branches covered.">                if (num != 0) {</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">                    if (!checkNumber(num, row, col)) { //causes lots of errors</span>
+<span class="fc" id="L38">                        return false;</span>
                     }
                 }
             }
         }
-<span class="nc" id="L26">        return true;</span>
+<span class="fc" id="L43">        return true;</span>
     }
 
     public int get(int x, int y) {
-<span class="fc" id="L30">        return board[x][y];</span>
+<span class="fc" id="L47">        return board.get(x * 9 + y).getFieldValue();</span>
     }
 
     public boolean set(int x, int y, int value) {
-<span class="fc bfc" id="L34" title="All 4 branches covered.">        if (value &lt; 0 || value &gt; 9) {</span>
-<span class="fc" id="L35">            return false;</span>
-        }
-
+        // if (value &lt; 0 || value &gt; 9) {
+        //    return false;
+        //}
         try {
 
-<span class="fc bfc" id="L40" title="All 2 branches covered.">            if (value != 0) {</span>
-<span class="fc bfc" id="L41" title="All 2 branches covered.">                if (!checkNumber(value, x, y)) {</span>
-<span class="fc" id="L42">                    return false;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">            if (value != 0) {</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">                if (!checkNumber(value, x, y)) {</span>
+<span class="fc" id="L58">                    return false;</span>
                 }
             }
 
-<span class="fc" id="L46">            board[x][y] = value;</span>
-<span class="fc" id="L47">        } catch (ArrayIndexOutOfBoundsException e) {</span>
-<span class="fc" id="L48">            return false;</span>
-<span class="fc" id="L49">        }</span>
-<span class="fc" id="L50">        return true;</span>
+<span class="fc" id="L62">            board.get(x * 9 + y).setFieldValue(value);</span>
+<span class="fc" id="L63">        } catch (IndexOutOfBoundsException e) {</span>
+<span class="fc" id="L64">            return false;</span>
+<span class="fc" id="L65">        }</span>
+<span class="fc" id="L66">        return true;</span>
+    }
+
+    public SudokuRow getRow(int row) {
+<span class="fc" id="L70">        List&lt;SudokuField&gt; rows = Arrays.asList(new SudokuField[9]);</span>
+
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc" id="L73">            rows.set(i, board.get(row * 9 + i));</span>
+        }
+<span class="fc" id="L75">        return new SudokuRow(rows);</span>
+    }
+
+    public SudokuColumn getColumn(int column) {
+<span class="fc" id="L79">        List&lt;SudokuField&gt; columns = Arrays.asList(new SudokuField[9]);</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc" id="L81">            columns.set(i, board.get(i * 9 + column));</span>
+        }
+<span class="fc" id="L83">        return new SudokuColumn(columns);</span>
+    }
+
+    public SudokuBox getBox(int row, int column) {
+<span class="fc" id="L87">        int tempR = row - row % 3;</span>
+<span class="fc" id="L88">        int tempC = column - column % 3;</span>
+<span class="fc" id="L89">        List&lt;SudokuField&gt; boxes = Arrays.asList(new SudokuField[9]);</span>
+
+<span class="fc" id="L91">        int i = 0;</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">        for (int r = tempR; r &lt; tempR + 3; r++) {</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">            for (int c = tempC; c &lt; tempC + 3; c++) {</span>
+<span class="fc" id="L94">                boxes.set(i, board.get(r * 9 + c));</span>
+<span class="fc" id="L95">                i++;</span>
+            }
+        }
+<span class="fc" id="L98">        return new SudokuBox(boxes);</span>
     }
 
     public String toString() {
-<span class="fc" id="L54">        StringBuilder stringBuilder = new StringBuilder();</span>
+<span class="fc" id="L102">        StringBuilder stringBuilder = new StringBuilder();</span>
 
-<span class="fc bfc" id="L56" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
-<span class="fc bfc" id="L57" title="All 2 branches covered.">            for (int j = 0; j &lt; 9; j++) {</span>
-<span class="fc bfc" id="L58" title="All 6 branches covered.">                if ((i == 3 || i == 6) &amp;&amp; j == 0) {</span>
-<span class="fc" id="L59">                    stringBuilder.append(&quot;-----------------------------\n&quot;);</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">        for (int i = 0; i &lt; 9; i++) {</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">            for (int j = 0; j &lt; 9; j++) {</span>
+<span class="fc bfc" id="L106" title="All 6 branches covered.">                if ((i == 3 || i == 6) &amp;&amp; j == 0) {</span>
+<span class="fc" id="L107">                    stringBuilder.append(&quot;-----------------------------\n&quot;);</span>
                 }
-<span class="fc bfc" id="L61" title="All 4 branches covered.">                if ((j == 3 || j == 6)) {</span>
-<span class="fc" id="L62">                    stringBuilder.append(&quot;| &quot;);</span>
+<span class="fc bfc" id="L109" title="All 4 branches covered.">                if ((j == 3 || j == 6)) {</span>
+<span class="fc" id="L110">                    stringBuilder.append(&quot;| &quot;);</span>
                 }
-<span class="fc bfc" id="L64" title="All 2 branches covered.">                if (j == 8) {</span>
-<span class="fc" id="L65">                    stringBuilder.append(board[i][j]);</span>
-<span class="fc" id="L66">                    stringBuilder.append(&quot;\n&quot;);</span>
+<span class="fc bfc" id="L112" title="All 2 branches covered.">                if (j == 8) {</span>
+<span class="fc" id="L113">                    stringBuilder.append(board.get(i * 9 + j).getFieldValue());</span>
+<span class="fc" id="L114">                    stringBuilder.append(&quot;\n&quot;);</span>
                 } else {
-<span class="fc" id="L68">                    stringBuilder.append(board[i][j]);</span>
-<span class="fc" id="L69">                    stringBuilder.append(&quot;  &quot;);</span>
+<span class="fc" id="L116">                    stringBuilder.append(board.get(i * 9 + j).getFieldValue());</span>
+<span class="fc" id="L117">                    stringBuilder.append(&quot;  &quot;);</span>
                 }
             }
         }
-<span class="fc" id="L73">        return stringBuilder.toString();</span>
-    }
-
-    private boolean checkNumberInRow(int number, int row) {
-<span class="fc bfc" id="L77" title="All 2 branches covered.">        for (int c = 0; c &lt; 9; c++) {</span>
-<span class="fc bfc" id="L78" title="All 2 branches covered.">            if (board[row][c] == number) {</span>
-<span class="fc" id="L79">                return false;</span>
-            }
-        }
-<span class="fc" id="L82">        return true;</span>
-    }
-
-    private boolean checkNumberInColumn(int number, int column) {
-<span class="fc bfc" id="L86" title="All 2 branches covered.">        for (int r = 0; r &lt; 9; r++) {</span>
-<span class="fc bfc" id="L87" title="All 2 branches covered.">            if (board[r][column] == number) {</span>
-<span class="fc" id="L88">                return false;</span>
-            }
-        }
-<span class="fc" id="L91">        return true;</span>
-    }
-
-    private boolean checkNumberInBox(int number, int row, int column) {
-<span class="fc" id="L95">        int tempR = row - row % 3;</span>
-<span class="fc" id="L96">        int tempC = column - column % 3;</span>
-<span class="fc bfc" id="L97" title="All 2 branches covered.">        for (int r = tempR; r &lt; tempR + 3; r++) {</span>
-<span class="fc bfc" id="L98" title="All 2 branches covered.">            for (int c = tempC; c &lt; tempC + 3; c++) {</span>
-<span class="fc bfc" id="L99" title="All 2 branches covered.">                if (board[r][c] == number) {</span>
-<span class="fc" id="L100">                    return false;</span>
-                }
-            }
-        }
-<span class="fc" id="L104">        return true;</span>
+<span class="fc" id="L121">        return stringBuilder.toString();</span>
     }
 
     private boolean checkNumber(int number, int row, int column) {
-
-<span class="fc bfc" id="L109" title="All 2 branches covered.">        return (checkNumberInRow(number, row)</span>
-<span class="fc bfc" id="L110" title="All 2 branches covered.">                &amp;&amp; checkNumberInColumn(number, column)</span>
-<span class="fc bfc" id="L111" title="All 2 branches covered.">                &amp;&amp; checkNumberInBox(number, row, column));</span>
+<span class="fc bfc" id="L125" title="All 4 branches covered.">        if (number &lt; 0 || number &gt; 9) {</span>
+<span class="fc" id="L126">            return false;</span>
+        }
+<span class="fc" id="L128">        board.get(row * 9 + column).setFieldValue(number);</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">        if (getBox(row, column).verify()</span>
+<span class="fc bfc" id="L130" title="All 2 branches covered.">                &amp;&amp; getRow(row).verify()</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">                &amp;&amp; getColumn(column).verify()) {</span>
+<span class="fc" id="L132">            return true;</span>
+        }
+<span class="fc" id="L134">        board.get(row * 9 + column).setFieldValue(0);</span>
+<span class="fc" id="L135">        return false;</span>
     }
 
 }

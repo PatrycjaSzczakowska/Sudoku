@@ -2,6 +2,33 @@
 
 <span class="nc" id="L3">public class Main {</span>
     public static void main(final String[] args) {
-<span class="nc" id="L5">    }</span>
+
+<span class="nc" id="L6">        int[][] grid3 = {{3, 0, 6, 5, 0, 8, 4, 0, 0},</span>
+                {5, 2, 0, 0, 0, 0, 0, 0, 0},
+                {0, 8, 7, 0, 0, 0, 0, 3, 1},
+                {0, 0, 3, 0, 1, 0, 0, 8, 0},
+                {9, 0, 0, 8, 6, 3, 0, 0, 5},
+                {0, 5, 0, 0, 9, 0, 6, 0, 0},
+                {1, 3, 0, 0, 0, 0, 2, 5, 0},
+                {0, 0, 0, 0, 0, 0, 0, 7, 4},
+                {0, 0, 5, 2, 0, 6, 3, 0, 0}};
+
+<span class="nc" id="L16">        SudokuBoard sudoku3 = new SudokuBoard(grid3);</span>
+
+<span class="nc" id="L18">        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();</span>
+//
+//        solver.solve(sudoku3);
+//
+//        System.out.println(sudoku3.toString());
+
+<span class="nc" id="L24">        FileSudokuBoardDao fileSudokuBoardDaoRead=new FileSudokuBoardDao(&quot;D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plik.txt&quot;);</span>
+<span class="nc" id="L25">        SudokuBoard board=fileSudokuBoardDaoRead.read();</span>
+<span class="nc" id="L26">        System.out.println(board.toString());</span>
+
+<span class="nc" id="L28">        FileSudokuBoardDao fileSudokuBoardDaoWrite=new FileSudokuBoardDao(&quot;D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plikWyj.txt&quot;);</span>
+<span class="nc" id="L29">        fileSudokuBoardDaoWrite.write(sudoku3);</span>
+
+        //System.out.println(sudoku3.get(0,0));
+<span class="nc" id="L32">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

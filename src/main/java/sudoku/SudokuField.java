@@ -12,12 +12,11 @@ public class SudokuField {
     }
 
     public boolean setFieldValue(int newValue) {
-        if (value < 0 || value > 9) {
-            return false;
-        }
-        else{
-            value = newValue;
-        }
+        //if (value < 0 || value > 9) {
+        //    return false;
+        //} else {
+        value = newValue;
+        //}
         return true;
     }
 }

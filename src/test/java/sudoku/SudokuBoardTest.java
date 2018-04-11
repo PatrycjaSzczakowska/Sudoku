@@ -47,7 +47,7 @@ public class SudokuBoardTest {
         assertEquals(sudoku.set(0, 1, 1), true);
         assertEquals(sudoku.set(0, 1, 3), false);
 
-        int[][] grid2 = {{0, 0, 0, 1, 0, 5, 0, 0, 8},
+        int[][] grid2 = {{30, -2, 0, 1, 0, 5, 0, 0, 8},
                 {0, 5, 9, 8, 0, 0, 0, 6, 7},
                 {0, 0, 0, 0, 0, 0, 4, 0, 0},
                 {5, 3, 2, 0, 0, 6, 0, 0, 0},
@@ -58,6 +58,9 @@ public class SudokuBoardTest {
                 {9, 0, 0, 5, 0, 7, 0, 0, 0}};
 
         SudokuBoard sudoku2 = new SudokuBoard(grid2);
+        assertEquals(sudoku2.get(0, 0), 0);
+        assertEquals(sudoku2.get(0, 1), 0);
+
         assertEquals(sudoku2.get(8, 8), 0);
         assertEquals(sudoku2.set(8, 8, 2), true);
         assertEquals(sudoku2.get(8, 8), 2);
@@ -67,6 +70,24 @@ public class SudokuBoardTest {
         assertEquals(sudoku2.set(8, 8, 12), false);
 
         assertEquals(sudoku2.set(8, 8, -1), false);
+
+        int[][] grid3 = {{1, 0, 0, 1, 0, 5, 0, 0, 8},
+                {0, 5, 9, 8, 0, 0, 0, 6, 7},
+                {0, 0, 0, 0, 0, 0, 4, 0, 0},
+                {5, 3, 2, 0, 0, 6, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 2, 0, 0, 8, 4, 6},
+                {0, 0, 8, 0, 0, 0, 0, 0, 0},
+                {2, 6, 0, 0, 0, 8, 7, 3, 0},
+                {9, 0, 0, 5, 0, 7, 0, 0, 0}};
+
+        SudokuBoard sudoku3 = new SudokuBoard(grid3);
+
+        for (int i=0; i<9;i++){
+            for(int j=0;j<9;j++){
+                assertEquals(sudoku3.get(i, j), 0);
+            }
+        }
     }
 
     @Test
@@ -156,11 +177,11 @@ public class SudokuBoardTest {
 
         assertEquals(true, box.verify());
 
-        int[][] grid2=new int [9][9];
+        int[][] grid2 = new int[9][9];
 
-        SudokuBoard sudoku2=new SudokuBoard(grid2);
+        SudokuBoard sudoku2 = new SudokuBoard(grid2);
 
-        BacktrackingSudokuSolver solver=new BacktrackingSudokuSolver();
+        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
         solver.solve(sudoku2);
 

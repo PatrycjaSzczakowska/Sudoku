@@ -2,16 +2,32 @@ package sudoku;
 
 public class Main {
     public static void main(final String[] args) {
-        int[][] grid2=new int [9][9];
 
-        SudokuBoard sudoku2=new SudokuBoard(grid2);
+        int[][] grid3 = {{3, 0, 6, 5, 0, 8, 4, 0, 0},
+                {5, 2, 0, 0, 0, 0, 0, 0, 0},
+                {0, 8, 7, 0, 0, 0, 0, 3, 1},
+                {0, 0, 3, 0, 1, 0, 0, 8, 0},
+                {9, 0, 0, 8, 6, 3, 0, 0, 5},
+                {0, 5, 0, 0, 9, 0, 6, 0, 0},
+                {1, 3, 0, 0, 0, 0, 2, 5, 0},
+                {0, 0, 0, 0, 0, 0, 0, 7, 4},
+                {0, 0, 5, 2, 0, 6, 3, 0, 0}};
 
-        BacktrackingSudokuSolver solver=new BacktrackingSudokuSolver();
+        SudokuBoard sudoku3 = new SudokuBoard(grid3);
 
-        System.out.println(sudoku2.toString());
+        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
+//
+//        solver.solve(sudoku3);
+//
+//        System.out.println(sudoku3.toString());
 
-        solver.solve(sudoku2);
+        FileSudokuBoardDao fileSudokuBoardDaoRead=new FileSudokuBoardDao("D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plik.txt");
+        SudokuBoard board=fileSudokuBoardDaoRead.read();
+        System.out.println(board.toString());
 
-        System.out.println(sudoku2.toString());
+        FileSudokuBoardDao fileSudokuBoardDaoWrite=new FileSudokuBoardDao("D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plikWyj.txt");
+        fileSudokuBoardDaoWrite.write(sudoku3);
+
+        //System.out.println(sudoku3.get(0,0));
     }
 }

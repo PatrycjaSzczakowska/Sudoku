@@ -52,15 +52,15 @@ public class BacktrackingSudokuSolverTest {
 
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
-        int[] tab = solver.findEmpty(sudoku);
+        Pair tab = solver.findEmpty(sudoku);
 
-        assertEquals(tab[0] != 10, true);
+        assertEquals(tab.isFlag(), false);
 
         solver.solve(sudoku);
 
 
         tab = solver.findEmpty(sudoku);
-        assertEquals(tab[0] == 10, true);
+        assertEquals(tab.isFlag(), true);
 
     }
 }
