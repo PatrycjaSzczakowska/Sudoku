@@ -160,7 +160,7 @@ public class SudokuBoardTest {
     }
 
     @Test
-    public void getBoxTest() {
+    public void equalsTest() {
         int[][] grid = {{3, 0, 6, 5, 0, 8, 4, 0, 0},
                 {5, 2, 0, 0, 0, 0, 0, 0, 0},
                 {0, 8, 7, 0, 0, 0, 0, 3, 1},
@@ -173,21 +173,55 @@ public class SudokuBoardTest {
 
         SudokuBoard sudoku = new SudokuBoard(grid);
 
-        SudokuBox box = sudoku.getBox(5, 4);
+        SudokuBoard sudoku2 = new SudokuBoard(grid);
 
-        assertEquals(true, box.verify());
+        assertEquals(sudoku.equals(sudoku2), true);
 
-        int[][] grid2 = new int[9][9];
+        int[][] grid2 = {{1, 0, 0, 1, 0, 5, 0, 0, 8},
+                {0, 5, 9, 8, 0, 0, 0, 6, 7},
+                {0, 0, 0, 0, 0, 0, 4, 0, 0},
+                {5, 3, 2, 0, 0, 6, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 2, 0, 0, 8, 4, 6},
+                {0, 0, 8, 0, 0, 0, 0, 0, 0},
+                {2, 6, 0, 0, 0, 8, 7, 3, 0},
+                {9, 0, 0, 5, 0, 7, 0, 0, 0}};
 
-        SudokuBoard sudoku2 = new SudokuBoard(grid2);
+        SudokuBoard sudoku3 = new SudokuBoard(grid2);
 
-        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
+        assertEquals(sudoku.equals(sudoku3),false);
+    }
 
-        solver.solve(sudoku2);
+    @Test
+    public void getHashTest() {
+        int[][] grid = {{3, 0, 6, 5, 0, 8, 4, 0, 0},
+                {5, 2, 0, 0, 0, 0, 0, 0, 0},
+                {0, 8, 7, 0, 0, 0, 0, 3, 1},
+                {0, 0, 3, 0, 1, 0, 0, 8, 0},
+                {9, 0, 0, 8, 6, 3, 0, 0, 5},
+                {0, 5, 0, 0, 9, 0, 6, 0, 0},
+                {1, 3, 0, 0, 0, 0, 2, 5, 0},
+                {0, 0, 0, 0, 0, 0, 0, 7, 4},
+                {0, 0, 5, 2, 0, 6, 3, 0, 0}};
 
-        box = sudoku.getBox(7, 2);
+        SudokuBoard sudoku = new SudokuBoard(grid);
 
-        assertEquals(true, box.verify());
+        SudokuBoard sudoku2 = new SudokuBoard(grid);
 
+        assertEquals(sudoku.hashCode(),sudoku2.hashCode());
+
+        int[][] grid2 = {{1, 0, 0, 1, 0, 5, 0, 0, 8},
+                {0, 5, 9, 8, 0, 0, 0, 6, 7},
+                {0, 0, 0, 0, 0, 0, 4, 0, 0},
+                {5, 3, 2, 0, 0, 6, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0, 0, 0, 0},
+                {0, 0, 0, 2, 0, 0, 8, 4, 6},
+                {0, 0, 8, 0, 0, 0, 0, 0, 0},
+                {2, 6, 0, 0, 0, 8, 7, 3, 0},
+                {9, 0, 0, 5, 0, 7, 0, 0, 0}};
+
+        SudokuBoard sudoku3 = new SudokuBoard(grid2);
+
+        assertNotEquals(sudoku.hashCode(),sudoku3.hashCode());
     }
 }

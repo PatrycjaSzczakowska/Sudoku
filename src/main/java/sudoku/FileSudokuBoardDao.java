@@ -1,6 +1,10 @@
 package sudoku;
 
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+
 import java.io.*;
+import java.util.List;
 import java.util.Scanner;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard> {
@@ -28,13 +32,11 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             }
             scanner.close();
 
-        } catch (IOException e) {
-            System.out.println("ERROR WITH FILE");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
-        SudokuBoard temp = new SudokuBoard(grid);
-
-        return temp;
+        return new SudokuBoard(grid);
     }
 
     @Override
@@ -56,14 +58,13 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             }
             printWriter.close();
 
-        } catch (IOException e) {
-            System.out.println("ERROR WITH FILE");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
     public void finalize() {
-
     }
 }
 

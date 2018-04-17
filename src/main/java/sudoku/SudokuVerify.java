@@ -1,5 +1,7 @@
 package sudoku;
 
+import com.google.common.base.Objects;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,5 +28,43 @@ public abstract class SudokuVerify {
             }
         }
         return true;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = 0; i < 9; i++) {
+
+            if ((i == 3 || i == 6)) {
+                stringBuilder.append("| ");
+            }
+            stringBuilder.append(fields.get(i).getFieldValue());
+            stringBuilder.append("  ");
+
+        }
+        return stringBuilder.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(
+                this.fields);
+
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        SudokuVerify other = (SudokuVerify) obj;
+        return Objects.equal(this.fields, other.fields);
+
+
     }
 }

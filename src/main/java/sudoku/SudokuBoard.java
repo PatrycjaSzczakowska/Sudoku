@@ -1,6 +1,9 @@
 package sudoku;
 
-import java.util.*;
+import com.google.common.base.Objects;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class SudokuBoard {
     private List<SudokuField> board = Arrays.asList(new SudokuField[81]);
@@ -98,6 +101,21 @@ public class SudokuBoard {
         return new SudokuBox(boxes);
     }
 
+    private boolean checkNumber(int number, int row, int column) {
+        if (number < 0 || number > 9) {
+            return false;
+        }
+        board.get(row * 9 + column).setFieldValue(number);
+        if (getBox(row, column).verify()
+                && getRow(row).verify()
+                && getColumn(column).verify()) {
+            return true;
+        }
+        board.get(row * 9 + column).setFieldValue(0);
+        return false;
+    }
+
+    @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -121,18 +139,25 @@ public class SudokuBoard {
         return stringBuilder.toString();
     }
 
-    private boolean checkNumber(int number, int row, int column) {
-        if (number < 0 || number > 9) {
-            return false;
-        }
-        board.get(row * 9 + column).setFieldValue(number);
-        if (getBox(row, column).verify()
-                && getRow(row).verify()
-                && getColumn(column).verify()) {
-            return true;
-        }
-        board.get(row * 9 + column).setFieldValue(0);
-        return false;
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hashCode(
+                this.board);
+
     }
 
+    @Override
+    public boolean equals(final Object obj) {
+
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        SudokuBoard other = (SudokuBoard) obj;
+        return Objects.equal(this.board, other.board);
+    }
 }
