@@ -2,42 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf786633-9464-414e-96c2-cda9373b0639" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/sudoku/SudokuFieldTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/plik.txt" afterPath="$PROJECT_DIR$/plik.txt" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sudoku/FileSudokuBoardDao.java" afterPath="$PROJECT_DIR$/src/main/java/sudoku/FileSudokuBoardDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sudoku/Main.java" afterPath="$PROJECT_DIR$/src/main/java/sudoku/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sudoku/SudokuBoard.java" afterPath="$PROJECT_DIR$/src/main/java/sudoku/SudokuBoard.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sudoku/SudokuBoardDaoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/sudoku/SudokuBoardDaoFactory.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sudoku/SudokuField.java" afterPath="$PROJECT_DIR$/src/main/java/sudoku/SudokuField.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sudoku/SudokuVerify.java" afterPath="$PROJECT_DIR$/src/main/java/sudoku/SudokuVerify.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/sudoku/FileSudokuBoardDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/sudoku/FileSudokuBoardDaoTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/sudoku/SudokuBoardTest.java" afterPath="$PROJECT_DIR$/src/test/java/sudoku/SudokuBoardTest.java" />
-      <change beforePath="$PROJECT_DIR$/sudoku.iml" afterPath="$PROJECT_DIR$/sudoku.iml" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sudoku/FileSudokuBoardDao.class" afterPath="$PROJECT_DIR$/target/classes/sudoku/FileSudokuBoardDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sudoku/Main.class" afterPath="$PROJECT_DIR$/target/classes/sudoku/Main.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sudoku/SudokuBoard.class" afterPath="$PROJECT_DIR$/target/classes/sudoku/SudokuBoard.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sudoku/SudokuBoardDaoFactory.class" afterPath="$PROJECT_DIR$/target/classes/sudoku/SudokuBoardDaoFactory.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sudoku/SudokuField.class" afterPath="$PROJECT_DIR$/target/classes/sudoku/SudokuField.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sudoku/SudokuVerify.class" afterPath="$PROJECT_DIR$/target/classes/sudoku/SudokuVerify.class" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" afterPath="$PROJECT_DIR$/target/jacoco.exec" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/sudoku/SudokuBoard.html" afterPath="$PROJECT_DIR$/target/site/jacoco/sudoku/SudokuBoard.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/sudoku/SudokuBoard.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/sudoku/SudokuBoard.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/sudoku/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/sudoku/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/sudoku/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/sudoku/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/sudoku-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/sudoku-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-sudoku.BacktrackingSudokuSolverTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-sudoku.BacktrackingSudokuSolverTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-sudoku.SudokuBoardTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-sudoku.SudokuBoardTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/sudoku.BacktrackingSudokuSolverTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/sudoku.BacktrackingSudokuSolverTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/sudoku.SudokuBoardTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/sudoku.SudokuBoardTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sudoku/SudokuBoardTest.class" afterPath="$PROJECT_DIR$/target/test-classes/sudoku/SudokuBoardTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/sudoku/Main.html" afterPath="$PROJECT_DIR$/target/site/jacoco/sudoku/Main.html" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/sudoku/Main.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/sudoku/Main.java.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +20,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sudoku/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="630">
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
@@ -63,8 +30,8 @@
       <file leaf-file-name="FileSudokuBoardDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sudoku/FileSudokuBoardDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="945">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#read#0;class#FileSudokuBoardDao#0" expanded="false" />
@@ -88,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/sudoku/SudokuBoardDaoFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -197,6 +164,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,10 +226,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -570,7 +537,8 @@
       <workItem from="1523892222841" duration="2367000" />
       <workItem from="1523894629173" duration="1347000" />
       <workItem from="1523896956686" duration="609000" />
-      <workItem from="1523954664734" duration="2419000" />
+      <workItem from="1523954664734" duration="3294000" />
+      <workItem from="1524164189741" duration="181000" />
     </task>
     <task id="LOCAL-00001" summary="Dao interface">
       <created>1523479783605</created>
@@ -586,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523482042940</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dao interface updated">
+      <created>1523957101180</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523957101181</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -622,26 +597,24 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87975000" />
+    <option name="totallyTimeSpent" value="89031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32162458" sideWeight="0.41822916" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183315" sideWeight="0.3890625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8151042" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183315" sideWeight="0.6109375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3183315" sideWeight="0.6109375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -653,6 +626,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32162458" sideWeight="0.41822916" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -724,13 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding>
-            <element signature="method#SudokuBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#set#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#getRow#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkNumber#0;class#SudokuBoard#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="method#SudokuBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#set#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#getRow#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkNumber#0;class#SudokuBoard#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -796,13 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="method#SudokuBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#set#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#getRow#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkNumber#0;class#SudokuBoard#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,13 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="method#SudokuBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#set#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#getRow#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkNumber#0;class#SudokuBoard#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,14 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="43" selection-end-column="69" />
-          <folding>
-            <element signature="method#check#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#get#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#toStringTest#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#getRowTest#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#getColumnTest#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#equalsTest#0;class#SudokuBoardTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,9 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,11 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="e#140#141#0" expanded="false" />
-            <element signature="e#169#170#0" expanded="false" />
-            <marker date="1523467565239" expanded="true" signature="314:319" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,11 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="49" column="81" lean-forward="false" selection-start-line="49" selection-start-column="81" selection-end-line="49" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="class#Pair#0" expanded="false" />
-            <element signature="e#968#977#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1020,7 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,10 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="41" column="55" lean-forward="true" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#hashCodeTest#0;class#SudokuFieldTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1047,14 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="193" column="0" lean-forward="true" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-          <folding>
-            <element signature="method#check#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#get#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#toStringTest#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#getRowTest#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#getColumnTest#0;class#SudokuBoardTest#0" expanded="false" />
-            <element signature="method#equalsTest#0;class#SudokuBoardTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,7 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,7 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,13 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="157" column="12" lean-forward="false" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
-          <folding>
-            <element signature="method#SudokuBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkBoard#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#set#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#getRow#0;class#SudokuBoard#0" expanded="false" />
-            <element signature="method#checkNumber#0;class#SudokuBoard#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="303" column="59" lean-forward="false" selection-start-line="303" selection-start-column="59" selection-end-line="303" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,15 +998,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sudoku/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="630">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -1124,8 +1019,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sudoku/FileSudokuBoardDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="945">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#read#0;class#FileSudokuBoardDao#0" expanded="false" />
@@ -1137,7 +1032,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sudoku/SudokuBoardDaoFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>

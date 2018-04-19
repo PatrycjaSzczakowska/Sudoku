@@ -13,22 +13,43 @@
                 {0, 0, 0, 0, 0, 0, 0, 7, 4},
                 {0, 0, 5, 2, 0, 6, 3, 0, 0}};
 
-<span class="nc" id="L16">        SudokuBoard sudoku3 = new SudokuBoard(grid3);</span>
+<span class="nc" id="L16">        int[][] grid4 = {{3, 0, 6, 5, 0, 8, 4, 0, 1},</span>
+                {5, 2, 0, 0, 0, 0, 0, 0, 0},
+                {0, 8, 7, 0, 0, 0, 0, 3, 1},
+                {0, 0, 3, 0, 1, 0, 0, 8, 0},
+                {9, 0, 0, 8, 6, 3, 0, 0, 5},
+                {0, 5, 0, 0, 9, 0, 6, 0, 0},
+                {1, 3, 0, 0, 0, 0, 2, 5, 0},
+                {0, 0, 0, 0, 0, 0, 0, 7, 4},
+                {0, 0, 5, 2, 0, 6, 3, 0, 0}};
 
-<span class="nc" id="L18">        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();</span>
+<span class="nc" id="L26">        SudokuBoard sudoku3 = new SudokuBoard(grid3);</span>
+
+<span class="nc" id="L28">        SudokuBoard sudoku4 = new SudokuBoard(grid3);</span>
+
+<span class="nc" id="L30">        SudokuBoard sudoku5 = new SudokuBoard(grid4);</span>
+
+<span class="nc" id="L32">        System.out.println(sudoku3.equals(sudoku5));</span>
+        //System.out.println(sudoku3.hashCode());
+        //System.out.println(sudoku4.hashCode());
+
+
+<span class="nc" id="L37">        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();</span>
 //
-//        solver.solve(sudoku3);
+<span class="nc" id="L39">        solver.solve(sudoku3);</span>
+
+
 //
 //        System.out.println(sudoku3.toString());
 
-<span class="nc" id="L24">        FileSudokuBoardDao fileSudokuBoardDaoRead=new FileSudokuBoardDao(&quot;D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plik.txt&quot;);</span>
-<span class="nc" id="L25">        SudokuBoard board=fileSudokuBoardDaoRead.read();</span>
-<span class="nc" id="L26">        System.out.println(board.toString());</span>
+<span class="nc" id="L45">        FileSudokuBoardDao fileSudokuBoardDaoRead=new FileSudokuBoardDao(&quot;D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plik.txt&quot;);</span>
+<span class="nc" id="L46">        SudokuBoard board=fileSudokuBoardDaoRead.read();</span>
+<span class="nc" id="L47">        System.out.println(board.toString());</span>
 
-<span class="nc" id="L28">        FileSudokuBoardDao fileSudokuBoardDaoWrite=new FileSudokuBoardDao(&quot;D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plikWyj.txt&quot;);</span>
-<span class="nc" id="L29">        fileSudokuBoardDaoWrite.write(sudoku3);</span>
+<span class="nc" id="L49">        FileSudokuBoardDao fileSudokuBoardDaoWrite=new FileSudokuBoardDao(&quot;D:\\STUDIA\\2rok\\IVsemestr\\Komponentowe\\sudoku\\plikWyj.txt&quot;);</span>
+<span class="nc" id="L50">        fileSudokuBoardDaoWrite.write(sudoku3);</span>
 
         //System.out.println(sudoku3.get(0,0));
-<span class="nc" id="L32">    }</span>
+<span class="nc" id="L53">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
